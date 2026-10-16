@@ -1,0 +1,40 @@
+{
+  "meta": {
+    "version": "2026-10",
+    "principe": "Les délais de comparution, d'appel, d'opposition, de tierce opposition (art. 586 al. 3), de recours en révision et de pourvoi en cassation sont augmentés au profit de la partie qui demeure loin du siège de la juridiction (art. 643 et 644 CPC). Ces augmentations s'appliquent sauf dérogation expresse (art. 645). Art. 647 : une notification faite à la personne dans un lieu où elle ne bénéficierait pas de l'augmentation n'ouvre que les délais applicables en ce lieu.",
+    "methode": "L'outil calcule l'échéance en ajoutant l'augmentation au délai principal, de deux manières : en un délai unique (cumulé) et en délais successifs. Quand les deux méthodes divergent (fins de mois), il retient la date la plus proche, par prudence, et le signale."
+  },
+  "residences": [
+    { "id": "metropole", "libelle": "France métropolitaine" },
+    { "id": "guadeloupe", "libelle": "Guadeloupe", "outremer": true },
+    { "id": "martinique", "libelle": "Martinique", "outremer": true },
+    { "id": "guyane", "libelle": "Guyane", "outremer": true },
+    { "id": "reunion", "libelle": "La Réunion", "outremer": true },
+    { "id": "mayotte", "libelle": "Mayotte", "outremer": true },
+    { "id": "saint-barthelemy", "libelle": "Saint-Barthélemy", "outremer": true },
+    { "id": "saint-martin", "libelle": "Saint-Martin", "outremer": true },
+    { "id": "saint-pierre-et-miquelon", "libelle": "Saint-Pierre-et-Miquelon", "outremer": true },
+    { "id": "polynesie", "libelle": "Polynésie française", "outremer": true },
+    { "id": "wallis-futuna", "libelle": "Wallis-et-Futuna", "outremer": true },
+    { "id": "nouvelle-caledonie", "libelle": "Nouvelle-Calédonie", "outremer": true },
+    { "id": "taaf", "libelle": "Terres australes et antarctiques françaises", "outremer": true, "seulement643": true },
+    { "id": "etranger", "libelle": "Étranger" }
+  ],
+  "regles": {
+    "juridiction_metropole": {
+      "article": "art. 643 CPC",
+      "outremer": { "mois": 1, "texte": "art. 643, 1° : un mois pour les personnes qui demeurent outre-mer" },
+      "etranger": { "mois": 2, "texte": "art. 643, 2° : deux mois pour les personnes qui demeurent à l'étranger" }
+    },
+    "juridiction_outremer": {
+      "article": "art. 644 CPC",
+      "autre_collectivite": { "mois": 1, "texte": "art. 644 : un mois pour les personnes qui ne demeurent pas dans la collectivité où la juridiction a son siège" },
+      "etranger": { "mois": 2, "texte": "art. 644 : deux mois pour les personnes qui demeurent à l'étranger" }
+    }
+  },
+  "departementsVersResidence": {
+    "971": "guadeloupe", "972": "martinique", "973": "guyane", "974": "reunion", "975": "saint-pierre-et-miquelon",
+    "976": "mayotte", "977": "saint-barthelemy", "978": "saint-martin", "984": "taaf", "986": "wallis-futuna",
+    "987": "polynesie", "988": "nouvelle-caledonie"
+  }
+}

@@ -1,0 +1,241 @@
+{
+ "meta": {
+  "source": "Échantillon saisi manuellement pour la démonstration (chefs-lieux de ressort, dont les 12 sites de l'expérimentation TAE). Pour un usage réel, générez le fichier complet depuis le jeu de données « Liste des juridictions compétentes pour les communes de France » (data.gouv.fr, ministère de la Justice) avec tools/build-juridictions.py.",
+  "avertissement": "Données à vérifier dans l'annuaire officiel avant tout acte. Les tribunaux de proximité et les pôles sociaux ne figurent pas dans l'échantillon.",
+  "miseAJour": "2026-10-16",
+  "complet": false
+ },
+ "communes": {
+  "75056": {
+   "tj": "Tribunal judiciaire de Paris",
+   "cph": "Conseil de prud'hommes de Paris",
+   "tc": "Tribunal des activités économiques de Paris",
+   "ca": "Cour d'appel de Paris",
+   "tae": true
+  },
+  "92050": {
+   "tj": "Tribunal judiciaire de Nanterre",
+   "cph": "Conseil de prud'hommes de Nanterre",
+   "tc": "Tribunal des activités économiques de Nanterre",
+   "ca": "Cour d'appel de Versailles",
+   "tae": true
+  },
+  "92012": {
+   "tj": "Tribunal judiciaire de Nanterre",
+   "cph": "Conseil de prud'hommes de Boulogne-Billancourt",
+   "tc": "Tribunal des activités économiques de Nanterre",
+   "ca": "Cour d'appel de Versailles",
+   "tae": true
+  },
+  "78646": {
+   "tj": "Tribunal judiciaire de Versailles",
+   "cph": "Conseil de prud'hommes de Versailles",
+   "tc": "Tribunal des activités économiques de Versailles",
+   "ca": "Cour d'appel de Versailles",
+   "tae": true
+  },
+  "93008": {
+   "tj": "Tribunal judiciaire de Bobigny",
+   "cph": "Conseil de prud'hommes de Bobigny",
+   "tc": "Tribunal de commerce de Bobigny",
+   "ca": "Cour d'appel de Paris",
+   "tae": false
+  },
+  "94028": {
+   "tj": "Tribunal judiciaire de Créteil",
+   "cph": "Conseil de prud'hommes de Créteil",
+   "tc": "Tribunal de commerce de Créteil",
+   "ca": "Cour d'appel de Paris",
+   "tae": false
+  },
+  "69123": {
+   "tj": "Tribunal judiciaire de Lyon",
+   "cph": "Conseil de prud'hommes de Lyon",
+   "tc": "Tribunal des activités économiques de Lyon",
+   "ca": "Cour d'appel de Lyon",
+   "tae": true
+  },
+  "13055": {
+   "tj": "Tribunal judiciaire de Marseille",
+   "cph": "Conseil de prud'hommes de Marseille",
+   "tc": "Tribunal des activités économiques de Marseille",
+   "ca": "Cour d'appel d'Aix-en-Provence",
+   "tae": true
+  },
+  "06088": {
+   "tj": "Tribunal judiciaire de Nice",
+   "cph": "Conseil de prud'hommes de Nice",
+   "tc": "Tribunal de commerce de Nice",
+   "ca": "Cour d'appel d'Aix-en-Provence",
+   "tae": false
+  },
+  "33063": {
+   "tj": "Tribunal judiciaire de Bordeaux",
+   "cph": "Conseil de prud'hommes de Bordeaux",
+   "tc": "Tribunal de commerce de Bordeaux",
+   "ca": "Cour d'appel de Bordeaux",
+   "tae": false
+  },
+  "31555": {
+   "tj": "Tribunal judiciaire de Toulouse",
+   "cph": "Conseil de prud'hommes de Toulouse",
+   "tc": "Tribunal de commerce de Toulouse",
+   "ca": "Cour d'appel de Toulouse",
+   "tae": false
+  },
+  "59350": {
+   "tj": "Tribunal judiciaire de Lille",
+   "cph": "Conseil de prud'hommes de Lille",
+   "tc": "Tribunal de commerce de Lille Métropole",
+   "ca": "Cour d'appel de Douai",
+   "tae": false
+  },
+  "44109": {
+   "tj": "Tribunal judiciaire de Nantes",
+   "cph": "Conseil de prud'hommes de Nantes",
+   "tc": "Tribunal de commerce de Nantes",
+   "ca": "Cour d'appel de Rennes",
+   "tae": false
+  },
+  "35238": {
+   "tj": "Tribunal judiciaire de Rennes",
+   "cph": "Conseil de prud'hommes de Rennes",
+   "tc": "Tribunal de commerce de Rennes",
+   "ca": "Cour d'appel de Rennes",
+   "tae": false
+  },
+  "67482": {
+   "tj": "Tribunal judiciaire de Strasbourg",
+   "cph": "Conseil de prud'hommes de Strasbourg",
+   "tc": "Chambre commerciale du tribunal judiciaire de Strasbourg",
+   "ca": "Cour d'appel de Colmar",
+   "tae": false
+  },
+  "68224": {
+   "tj": "Tribunal judiciaire de Mulhouse",
+   "cph": "Conseil de prud'hommes de Mulhouse",
+   "tc": "Chambre commerciale du tribunal judiciaire de Mulhouse",
+   "ca": "Cour d'appel de Colmar",
+   "tae": false
+  },
+  "57463": {
+   "tj": "Tribunal judiciaire de Metz",
+   "cph": "Conseil de prud'hommes de Metz",
+   "tc": "Chambre commerciale du tribunal judiciaire de Metz",
+   "ca": "Cour d'appel de Metz",
+   "tae": false
+  },
+  "54395": {
+   "tj": "Tribunal judiciaire de Nancy",
+   "cph": "Conseil de prud'hommes de Nancy",
+   "tc": "Tribunal des activités économiques de Nancy",
+   "ca": "Cour d'appel de Nancy",
+   "tae": true
+  },
+  "72181": {
+   "tj": "Tribunal judiciaire du Mans",
+   "cph": "Conseil de prud'hommes du Mans",
+   "tc": "Tribunal des activités économiques du Mans",
+   "ca": "Cour d'appel d'Angers",
+   "tae": true
+  },
+  "84007": {
+   "tj": "Tribunal judiciaire d'Avignon",
+   "cph": "Conseil de prud'hommes d'Avignon",
+   "tc": "Tribunal des activités économiques d'Avignon",
+   "ca": "Cour d'appel de Nîmes",
+   "tae": true
+  },
+  "87085": {
+   "tj": "Tribunal judiciaire de Limoges",
+   "cph": "Conseil de prud'hommes de Limoges",
+   "tc": "Tribunal des activités économiques de Limoges",
+   "ca": "Cour d'appel de Limoges",
+   "tae": true
+  },
+  "89024": {
+   "tj": "Tribunal judiciaire d'Auxerre",
+   "cph": "Conseil de prud'hommes d'Auxerre",
+   "tc": "Tribunal des activités économiques d'Auxerre",
+   "ca": "Cour d'appel de Paris",
+   "tae": true
+  },
+  "76351": {
+   "tj": "Tribunal judiciaire du Havre",
+   "cph": "Conseil de prud'hommes du Havre",
+   "tc": "Tribunal des activités économiques du Havre",
+   "ca": "Cour d'appel de Rouen",
+   "tae": true
+  },
+  "22278": {
+   "tj": "Tribunal judiciaire de Saint-Brieuc",
+   "cph": "Conseil de prud'hommes de Saint-Brieuc",
+   "tc": "Tribunal des activités économiques de Saint-Brieuc",
+   "ca": "Cour d'appel de Rennes",
+   "tae": true
+  },
+  "34172": {
+   "tj": "Tribunal judiciaire de Montpellier",
+   "cph": "Conseil de prud'hommes de Montpellier",
+   "tc": "Tribunal de commerce de Montpellier",
+   "ca": "Cour d'appel de Montpellier",
+   "tae": false
+  },
+  "38185": {
+   "tj": "Tribunal judiciaire de Grenoble",
+   "cph": "Conseil de prud'hommes de Grenoble",
+   "tc": "Tribunal de commerce de Grenoble",
+   "ca": "Cour d'appel de Grenoble",
+   "tae": false
+  },
+  "21231": {
+   "tj": "Tribunal judiciaire de Dijon",
+   "cph": "Conseil de prud'hommes de Dijon",
+   "tc": "Tribunal de commerce de Dijon",
+   "ca": "Cour d'appel de Dijon",
+   "tae": false
+  },
+  "05061": {
+   "tj": "Tribunal judiciaire de Gap",
+   "cph": "Conseil de prud'hommes de Gap",
+   "tc": "Tribunal de commerce de Gap",
+   "ca": "Cour d'appel de Grenoble",
+   "tae": false
+  },
+  "48095": {
+   "tj": "Tribunal judiciaire de Mende",
+   "cph": "Conseil de prud'hommes de Mende",
+   "tc": "Tribunal de commerce de Mende",
+   "ca": "Cour d'appel de Nîmes",
+   "tae": false
+  },
+  "97209": {
+   "tj": "Tribunal judiciaire de Fort-de-France",
+   "cph": "Conseil de prud'hommes de Fort-de-France",
+   "tc": "Tribunal mixte de commerce de Fort-de-France",
+   "ca": "Cour d'appel de Fort-de-France",
+   "tae": false
+  },
+  "97120": {
+   "tj": "Tribunal judiciaire de Pointe-à-Pitre",
+   "cph": "Conseil de prud'hommes de Pointe-à-Pitre",
+   "tc": "Tribunal mixte de commerce de Pointe-à-Pitre",
+   "ca": "Cour d'appel de Basse-Terre",
+   "tae": false
+  },
+  "97411": {
+   "tj": "Tribunal judiciaire de Saint-Denis",
+   "cph": "Conseil de prud'hommes de Saint-Denis",
+   "tc": "Tribunal mixte de commerce de Saint-Denis",
+   "ca": "Cour d'appel de Saint-Denis",
+   "tae": false
+  },
+  "97302": {
+   "tj": "Tribunal judiciaire de Cayenne",
+   "cph": "Conseil de prud'hommes de Cayenne",
+   "tc": "Tribunal mixte de commerce de Cayenne",
+   "ca": "Cour d'appel de Cayenne",
+   "tae": false
+  }
+ }
+}

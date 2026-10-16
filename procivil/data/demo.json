@@ -1,0 +1,90 @@
+{
+  "meta": {
+    "avertissement": "Affaires entièrement fictives, pour la démonstration. Les dates sont recalculées à chaque chargement par rapport à la date du jour, afin de toujours montrer une affaire urgente, une à surveiller, une expirée et une dans les temps. Le champ « decalage » d'un acte est exprimé en jours par rapport à l'acte qui fait courir le délai suivi."
+  },
+  "affaires": [
+    {
+      "id": "demo_martin",
+      "cible": "rouge",
+      "nom": "Martin c/ SARL Bâtiments du Rhône",
+      "reference": "2025-118",
+      "rg": "24/04512",
+      "demandeur": "M. Paul Martin",
+      "defendeur": "SARL Bâtiments du Rhône",
+      "client": "defendeur",
+      "juridiction": { "libelle": "Tribunal judiciaire", "code": "TJ", "nomPrecis": "Tribunal judiciaire de Lyon", "commune": { "insee": "69123", "nom": "Lyon", "dep": "69" }, "fondements": [ { "article": "art. L. 211-3 COJ" }, { "article": "art. 42 CPC" } ] },
+      "lieuJuridiction": "metropole", "zoneFeries": "metropole", "residence": "metropole",
+      "notes": "Malfaçons après travaux de rénovation. Jugement défavorable au client : décider de l'appel.",
+      "actes": [
+        { "type": "assignation", "libelle": "Assignation devant le tribunal judiciaire", "decalage": -300 },
+        { "type": "audience", "libelle": "Audience de plaidoiries", "decalage": -75 },
+        { "type": "autre", "libelle": "Jugement (condamnation à 48 000 €)", "decalage": -30 },
+        { "type": "signification_jugement", "libelle": "Signification du jugement au client" }
+      ],
+      "delais": [
+        { "typeId": "constitution_defendeur", "acte": 0, "statut": "accompli" },
+        { "typeId": "appel_contentieux", "acte": 3, "cible": true }
+      ]
+    },
+    {
+      "id": "demo_durand",
+      "cible": "orange",
+      "nom": "Durand c/ Banque Est-Crédit",
+      "reference": "2025-131",
+      "rg": "25/00877",
+      "demandeur": "Mme Claire Durand",
+      "defendeur": "SA Banque Est-Crédit",
+      "client": "demandeur",
+      "juridiction": { "libelle": "Cour d'appel", "code": "CA", "nomPrecis": "Cour d'appel de Colmar", "commune": { "insee": "67482", "nom": "Strasbourg", "dep": "67" }, "fondements": [] },
+      "lieuJuridiction": "metropole", "zoneFeries": "alsace-moselle", "residence": "metropole",
+      "notes": "Appel d'un jugement du TJ de Strasbourg. Alsace-Moselle : le Vendredi saint et le 26 décembre sont fériés.",
+      "actes": [
+        { "type": "signification_jugement", "libelle": "Signification du jugement du TJ de Strasbourg", "decalage": -20 },
+        { "type": "declaration_appel", "libelle": "Déclaration d'appel (RPVA)" }
+      ],
+      "delais": [
+        { "typeId": "appel_contentieux", "acte": 0, "statut": "accompli" },
+        { "typeId": "conclusions_appelant", "acte": 1, "cible": true }
+      ]
+    },
+    {
+      "id": "demo_alpha",
+      "cible": "expire",
+      "nom": "SAS Alpha Distribution c/ SARL Bêta Logistique",
+      "reference": "2025-140",
+      "rg": "25/R/0312",
+      "demandeur": "SAS Alpha Distribution",
+      "defendeur": "SARL Bêta Logistique",
+      "client": "defendeur",
+      "juridiction": { "libelle": "Tribunal des activités économiques (référé)", "code": "TC", "nomPrecis": "Tribunal des activités économiques de Paris", "commune": { "insee": "75056", "nom": "Paris", "dep": "75" }, "fondements": [ { "article": "art. L. 721-3 C. com." } ] },
+      "lieuJuridiction": "metropole", "zoneFeries": "metropole", "residence": "metropole",
+      "notes": "Ordonnance de référé (provision). Délai d'appel expiré : vérifier s'il a été formé, puis marquer le délai comme accompli ou documenter.",
+      "actes": [
+        { "type": "assignation", "libelle": "Assignation en référé", "decalage": -40 },
+        { "type": "signification_ordonnance_refere", "libelle": "Signification de l'ordonnance de référé" }
+      ],
+      "delais": [
+        { "typeId": "appel_refere", "acte": 1, "cible": true }
+      ]
+    },
+    {
+      "id": "demo_petit",
+      "cible": "normal",
+      "nom": "Petit c/ SAS Logistique Nord",
+      "reference": "2025-152",
+      "rg": "F 24/00631",
+      "demandeur": "M. Karim Petit",
+      "defendeur": "SAS Logistique Nord",
+      "client": "demandeur",
+      "juridiction": { "libelle": "Conseil de prud'hommes", "code": "CPH", "nomPrecis": "Conseil de prud'hommes de Lille", "commune": { "insee": "59350", "nom": "Lille", "dep": "59" }, "fondements": [ { "article": "art. L. 1411-1 C. trav." }, { "article": "art. R. 1412-1 C. trav." } ] },
+      "lieuJuridiction": "metropole", "zoneFeries": "metropole", "residence": "reunion",
+      "notes": "Le salarié demeure désormais à La Réunion : le délai d'appel est augmenté d'un mois (art. 643 CPC).",
+      "actes": [
+        { "type": "notification_jugement_greffe", "libelle": "Notification du jugement par le greffe (réception de la LRAR)" }
+      ],
+      "delais": [
+        { "typeId": "appel_prudhommes", "acte": 0, "cible": true }
+      ]
+    }
+  ]
+}

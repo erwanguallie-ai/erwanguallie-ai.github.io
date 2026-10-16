@@ -1,0 +1,52 @@
+{
+  "meta": {
+    "version": "2026-10",
+    "fondement": "Art. L. 3133-1 C. trav. (fêtes légales) ; art. L. 3134-13 C. trav. (Alsace-Moselle) ; loi n° 83-550 du 30 juin 1983 et décret n° 83-1003 du 23 novembre 1983 modifié (commémoration de l'abolition de l'esclavage).",
+    "usage": "Art. 642 al. 2 CPC : le délai qui expire un samedi, un dimanche ou un jour férié ou chômé est prorogé jusqu'au premier jour ouvrable suivant. On applique les jours fériés du lieu où l'acte doit être accompli, en principe celui de la juridiction.",
+    "avertissement": "Les collectivités du Pacifique (Nouvelle-Calédonie, Polynésie française, Wallis-et-Futuna) ont leur propre régime de jours fériés, qui n'est pas modélisé : ajoutez-les comme jours chômés dans les paramètres."
+  },
+  "nationaux": [
+    { "id": "jour_an", "libelle": "Jour de l'an", "type": "fixe", "mois": 1, "jour": 1 },
+    { "id": "lundi_paques", "libelle": "Lundi de Pâques", "type": "paques", "decalage": 1 },
+    { "id": "fete_travail", "libelle": "Fête du Travail", "type": "fixe", "mois": 5, "jour": 1 },
+    { "id": "victoire_1945", "libelle": "Victoire 1945", "type": "fixe", "mois": 5, "jour": 8 },
+    { "id": "ascension", "libelle": "Ascension", "type": "paques", "decalage": 39 },
+    { "id": "lundi_pentecote", "libelle": "Lundi de Pentecôte", "type": "paques", "decalage": 50,
+      "note": "Reste un jour férié légal (art. L. 3133-1 C. trav.) même s'il sert souvent de journée de solidarité. Par prudence, l'outil le traite comme férié pour la prorogation de l'art. 642, ce qui retarde l'échéance d'un jour : vérifiez auprès du greffe s'il est ouvert." },
+    { "id": "fete_nationale", "libelle": "Fête nationale", "type": "fixe", "mois": 7, "jour": 14 },
+    { "id": "assomption", "libelle": "Assomption", "type": "fixe", "mois": 8, "jour": 15 },
+    { "id": "toussaint", "libelle": "Toussaint", "type": "fixe", "mois": 11, "jour": 1 },
+    { "id": "armistice", "libelle": "Armistice 1918", "type": "fixe", "mois": 11, "jour": 11 },
+    { "id": "noel", "libelle": "Noël", "type": "fixe", "mois": 12, "jour": 25 }
+  ],
+  "zones": {
+    "metropole": { "libelle": "Métropole (hors Alsace-Moselle)", "departements": [], "supplementaires": [] },
+    "alsace-moselle": {
+      "libelle": "Alsace-Moselle (Bas-Rhin, Haut-Rhin, Moselle)",
+      "departements": ["57", "67", "68"],
+      "fondement": "Art. L. 3134-13 C. trav.",
+      "supplementaires": [
+        { "id": "vendredi_saint", "libelle": "Vendredi saint (Alsace-Moselle)", "type": "paques", "decalage": -2,
+          "note": "Le texte le prévoit dans les communes ayant un temple protestant ou une église mixte ; en pratique, les juridictions des trois départements le chôment." },
+        { "id": "saint_etienne", "libelle": "Saint-Étienne (Alsace-Moselle)", "type": "fixe", "mois": 12, "jour": 26 }
+      ]
+    },
+    "guadeloupe": { "libelle": "Guadeloupe", "departements": ["971"], "outremer": true,
+      "supplementaires": [ { "id": "abolition", "libelle": "Abolition de l'esclavage (Guadeloupe)", "type": "fixe", "mois": 5, "jour": 27 } ] },
+    "martinique": { "libelle": "Martinique", "departements": ["972"], "outremer": true,
+      "supplementaires": [ { "id": "abolition", "libelle": "Abolition de l'esclavage (Martinique)", "type": "fixe", "mois": 5, "jour": 22 } ] },
+    "guyane": { "libelle": "Guyane", "departements": ["973"], "outremer": true,
+      "supplementaires": [ { "id": "abolition", "libelle": "Abolition de l'esclavage (Guyane)", "type": "fixe", "mois": 6, "jour": 10 } ] },
+    "reunion": { "libelle": "La Réunion", "departements": ["974"], "outremer": true,
+      "supplementaires": [ { "id": "abolition", "libelle": "Abolition de l'esclavage (La Réunion)", "type": "fixe", "mois": 12, "jour": 20 } ] },
+    "mayotte": { "libelle": "Mayotte", "departements": ["976"], "outremer": true,
+      "supplementaires": [ { "id": "abolition", "libelle": "Abolition de l'esclavage (Mayotte)", "type": "fixe", "mois": 4, "jour": 27 } ] },
+    "saint-barthelemy": { "libelle": "Saint-Barthélemy", "departements": ["977"], "outremer": true,
+      "supplementaires": [ { "id": "abolition", "libelle": "Abolition de l'esclavage (Saint-Barthélemy)", "type": "fixe", "mois": 10, "jour": 9 } ] },
+    "saint-martin": { "libelle": "Saint-Martin", "departements": ["978"], "outremer": true, "verifie": false,
+      "supplementaires": [ { "id": "abolition", "libelle": "Abolition de l'esclavage (Saint-Martin)", "type": "fixe", "mois": 5, "jour": 28,
+        "note": "Date à vérifier : elle a été modifiée par le passé (27 puis 28 mai)." } ] },
+    "saint-pierre-et-miquelon": { "libelle": "Saint-Pierre-et-Miquelon", "departements": ["975"], "outremer": true, "supplementaires": [] },
+    "pacifique": { "libelle": "Nouvelle-Calédonie, Polynésie française, Wallis-et-Futuna (régime local non modélisé)", "departements": ["986", "987", "988"], "outremer": true, "verifie": false, "supplementaires": [] }
+  }
+}

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>ProCivil · Délais</title>
+  <meta name="description" content="Suivi d'affaires et calcul des délais de procédure civile française (maquette, outil d'aide).">
+  <meta name="robots" content="noindex, nofollow">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'wasm-unsafe-eval' blob:; worker-src 'self' blob:; connect-src 'self' https: blob: data:; img-src 'self' blob: data:; style-src 'self' 'unsafe-inline'; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231f4e79'/%3E%3Cpath d='M9 8h14M16 8v16M10 24h12M9 8l-3 8h6zM23 8l-3 8h6z' stroke='%23fff' stroke-width='2' fill='none' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="module" src="js/app.js"></script>
+</head>
+<body>
+  <a class="lien-evitement" href="#contenu">Aller au contenu</a>
+  <header class="barre">
+    <a class="marque" href="#/">
+      <span class="marque-nom">Pro<span>Civil</span></span>
+      <span class="marque-sous">Délais de procédure</span>
+    </a>
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="#/" data-nav>Affaires</a>
+      <a href="#/calculateur" data-nav>Calculateur</a>
+      <a href="#/competence" data-nav>Compétence</a>
+      <a href="#/document" data-nav>Document</a>
+      <a href="#/parametres" data-nav>Paramètres</a>
+    </nav>
+  </header>
+  <main id="contenu" tabindex="-1">
+    <noscript><p>Cet outil nécessite JavaScript.</p></noscript>
+    <p class="discret">Chargement des règles et de vos affaires…</p>
+  </main>
+  <footer class="pied">
+    <p><strong>Outil d'aide à la décision :</strong> il ne remplace pas la vérification par l'avocat des textes en vigueur (Légifrance), du point de départ exact du délai et des circonstances de l'espèce. Aucune garantie d'exactitude.</p>
+    <p>Données stockées uniquement dans ce navigateur. Maquette de démonstration, règles à jour au 16 octobre 2026 selon les sources consultées.</p>
+  </footer>
+  <div id="annonces" aria-live="polite"></div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ProCivil · Tests</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .resume { font-family: var(--f-titre); font-size: 1.4rem; }
+    .ok { color: var(--vert); } .ko { color: var(--rouge); }
+    .test { display: grid; grid-template-columns: 1.6rem minmax(0, 1fr); gap: .3rem; padding: .35rem 0; border-bottom: 1px solid var(--trait); }
+    .test small { grid-column: 2; color: var(--encre-2); }
+  </style>
+</head>
+<body>
+  <main id="contenu" class="vue">
+    <p><a href="index.html">← Retour à l'outil</a></p>
+    <h1>Jeu de tests</h1>
+    <p class="aide">Les tests s'exécutent dans votre navigateur, sur les fichiers de règles réellement publiés (data/*.json). Les mêmes tests tournent en ligne de commande : <code>node tests/run-node.mjs</code>.</p>
+    <p class="resume" id="resume" role="status">Exécution…</p>
+    <div id="resultats"></div>
+  </main>
+  <script type="module">
+    import { executerTests } from './tests/cas.js';
+    import { aujourdhuiISO } from './js/lib/dates.js';
+    const lire = async (f) => (await fetch(`data/${f}`, { cache: 'no-cache' })).json();
+    const regles = { catalogue: await lire('delais.json'), feries: await lire('feries.json'), distance: await lire('distance.json'), competence: await lire('competence.json'), juridictions: await lire('juridictions/echantillon.json') };
+    const res = executerTests(regles);
+    const zone = document.getElementById('resultats');
+    let groupe = '';
+    let section;
+    for (const r of res) {
+      if (r.groupe !== groupe) {
+        groupe = r.groupe;
+        section = document.createElement('section'); section.className = 'carte';
+        const t = document.createElement('h2'); t.textContent = groupe; section.append(t); zone.append(section);
+      }
+      const d = document.createElement('div'); d.className = 'test';
+      const i = document.createElement('span'); i.textContent = r.ok ? '✔' : '✘'; i.className = r.ok ? 'ok' : 'ko'; i.setAttribute('aria-label', r.ok ? 'réussi' : 'échoué');
+      const t = document.createElement('span'); t.textContent = r.titre;
+      const s = document.createElement('small'); s.textContent = r.detail || '';
+      d.append(i, t, s); section.append(d);
+    }
+    const ko = res.filter((r) => !r.ok).length;
+    const resume = document.getElementById('resume');
+    resume.textContent = `${res.length - ko} / ${res.length} tests réussis${ko ? ` — ${ko} échec(s)` : ''} (date de référence du tri : 16/10/2026 ; date du jour : ${aujourdhuiISO()})`;
+    resume.className = `resume ${ko ? 'ko' : 'ok'}`;
+  </script>
+</body>
+</html>
